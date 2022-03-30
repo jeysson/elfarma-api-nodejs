@@ -1,0 +1,10 @@
+const express = require('express');
+const router = express.Router();
+const controllerPerson = require('../controllers/personController');
+router.get('/', controllerPerson.get);
+//router.get('/:id', controllerPerson.getId);
+router.get('/obtercomid/', controllerPerson.obtercomid);
+router.post('/', controllerPerson.post);
+router.put('/:id', controllerPerson.put);
+router.delete('/:id', controllerPerson.delete);
+module.exports = router;
